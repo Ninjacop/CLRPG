@@ -9,7 +9,7 @@ Download/clone this repo to your computer and run this in any Common Lisp REPL, 
 
 ## Usage
 
-To run this program, you need a Common Lisp REPL: I used CLisp to test this project, which can be found [here](http://www.gnu.org/software/clisp/)
+To run this program, you need ALL the files downloaded (except the README) and you need a Common Lisp REPL: I used CLisp to test this project, which can be found [here](http://www.gnu.org/software/clisp/)
 
 In the REPL, type 
   
