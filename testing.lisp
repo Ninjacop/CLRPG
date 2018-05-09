@@ -1,0 +1,8 @@
+(defun eat (x)
+    (setq x (concatenate 'string x))
+    (cond ((and (equal x "corn") (> *food* 0)) (progn (format t "~%You regained health after eating the corn!~% +5 Health~%") (progn (setq *health* (+ *health* 5)) (decf (gethash 0 *food*) 1))))
+    ((and (equal x "berries") (> *berries* 1)) (progn (format t "~%You regained health after eating the berries!~% +10 Health~%") (progn (setq *health* (+ *health* 10)) (decf (gethash 0 *berries*) 2))))
+    ((and (equal x "cooked-fish") (> *cookedfish* 1)) (progn (format t "~%You regained health after eating the cooked fish!~% +20 Health~%") (progn (setq *health* (+ *health* 5)) (decf (gethash 0 *cookedfish*) 2))))
+    ((and (equal x "cooked-crab") (> *cookedmeat* 1)) (progn (format t "~%You regained health after eating the cooked crab!~% +20 Health~%") (progn (setq *health* (+ *health* 5)) (decf (gethash 0 *cookedmeat*) 2))))
+    ((and (equal x "raw-fish") (> *fish* 1)) (progn (format t "~%You lost some health after eating the raw fish...~% -5 Health~%") (progn (setq *health* (- *health* 5)) (decf (gethash 0 *fish*) 2))))
+    ((and (equal x "raw-crab") (> *meat* 1)) (progn (format t "~%You lost some health after eating the raw crab...~% -5 Health~%") (progn (setq *health* (- *health* 5))) (decf (gethash 0 *meat*) 2)))))
